@@ -112,7 +112,14 @@ a{ color:inherit; text-decoration:none; }
     </div>
 </div>
 
-<a href="shanu.vcf" class="save-btn" download>Save Contact</a>
+<a href="shanu.vcf" class="save-btn" download
+onclick="gtag('event','save_contact', {
+  event_category: 'engagement',
+  event_label: 'Save Contact Button'
+});">
+Save Contact
+</a>
+
 
 <div class="section-title">About CA. Shanu N</div>
 <div class="about">
@@ -132,4 +139,5 @@ Internal Audits as well as financial advisory services.
 </div>
 </body>
 </html>
+
 
