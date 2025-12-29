@@ -1,325 +1,177 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shanu N - Digital Business Card</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shanu N, ACA</title>
 
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            background: linear-gradient(180deg, #2c3e50 0%, #34495e 100%);
-            min-height: 100vh;
-            padding: 20px;
-        }
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HH319VT325"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-HH319VT325');
+</script>
 
-        .container {
-            max-width: 480px;
-            margin: 0 auto;
-            background: white;
-            border-radius: 0 0 20px 20px;
-            overflow: hidden;
-        }
-
-        .header {
-            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
-            padding: 40px 30px 120px;
-            position: relative;
-            color: white;
-        }
-
-        .header::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            height: 100px;
-            background: white;
-            border-radius: 50% 50% 0 0 / 100% 100% 0 0;
-        }
-
-        .name {
-            font-size: 48px;
-            font-weight: 700;
-            margin-bottom: 10px;
-            position: relative;
-            z-index: 1;
-        }
-
-        .name::after {
-            content: '';
-            display: block;
-            width: 80px;
-            height: 4px;
-            background: #3498db;
-            margin-top: 10px;
-        }
-
-        .designation {
-            font-size: 20px;
-            font-weight: 600;
-            margin-top: 30px;
-            position: relative;
-            z-index: 1;
-            letter-spacing: 0.5px;
-        }
-
-        .company {
-            font-size: 18px;
-            font-weight: 400;
-            margin-top: 8px;
-            opacity: 0.9;
-            position: relative;
-            z-index: 1;
-        }
-
-        .company-type {
-            font-size: 12px;
-            font-weight: 300;
-            margin-top: 3px;
-            opacity: 0.85;
-            position: relative;
-            z-index: 1;
-            letter-spacing: 2px;
-        }
-
-        .profile-section {
-            position: relative;
-            margin-top: -80px;
-            padding: 0 30px;
-            z-index: 2;
-        }
-
-        .profile-img {
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
-            border: 8px solid white;
-            margin: 0 auto 30px auto;
-            display: block;
-            object-fit: cover;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-        }
-
-        .about-section {
-            padding: 0 30px 30px;
-        }
-
-        .section-title {
-            font-size: 28px;
-            font-weight: 700;
-            margin-bottom: 15px;
-            color: #2c3e50;
-        }
-
-        .about-text {
-            font-size: 16px;
-            line-height: 1.6;
-            color: #555;
-            margin-bottom: 30px;
-        }
-
-        .contact-item {
-            display: flex;
-            align-items: center;
-            background: #f8f9fa;
-            padding: 18px 20px;
-            margin-bottom: 15px;
-            border-radius: 50px;
-            text-decoration: none;
-            color: #2c3e50;
-            transition: all 0.3s ease;
-        }
-
-        .contact-item:hover {
-            background: #e9ecef;
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        }
-
-        .contact-icon {
-            width: 50px;
-            height: 50px;
-            background: #2c3e50;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-right: 15px;
-            flex-shrink: 0;
-        }
-
-        .contact-icon svg {
-            width: 24px;
-            height: 24px;
-            fill: white;
-        }
-
-        .contact-text {
-            font-size: 16px;
-            font-weight: 500;
-            flex-grow: 1;
-        }
-
-        .address-text {
-            font-size: 15px;
-            line-height: 1.5;
-        }
-
-        .button-group {
-            display: flex;
-            gap: 15px;
-            padding: 30px;
-            padding-top: 10px;
-        }
-
-        .btn {
-            flex: 1;
-            padding: 18px 30px;
-            border: none;
-            border-radius: 50px;
-            font-size: 16px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        .btn-save {
-            background: #2c3e50;
-            color: white;
-        }
-
-        .btn-save:hover {
-            background: #1a252f;
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(44,62,80,0.3);
-        }
-
-        .btn-share {
-            background: #2c3e50;
-            color: white;
-        }
-
-        .btn-share:hover {
-            background: #1a252f;
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(44,62,80,0.3);
-        }
-
-        @media (max-width: 480px) {
-            .container {
-                border-radius: 0;
-            }
-            
-            body {
-                padding: 0;
-            }
-        }
-    </style>
+<style>
+body{
+    margin:0;
+    background:#eef5f2;
+    font-family: "Segoe UI", Arial, sans-serif;
+    color:#1f2933;
+}
+.container{
+    max-width:420px;
+    margin:20px auto;
+    padding:15px;
+}
+.header{
+    background:linear-gradient(135deg,#0b4f6c,#08384e);
+    border-radius:16px 16px 0 0;
+    padding:25px 20px 60px;
+    text-align:center;
+    position:relative;
+}
+.header img{
+    width:96px;
+    height:96px;
+    border-radius:50%;
+    object-fit:cover;
+    border:4px solid #ffffff;
+    position:absolute;
+    left:50%;
+    bottom:-48px;
+    transform:translateX(-50%);
+}
+.card{
+    background:#ffffff;
+    border-radius:0 0 16px 16px;
+    padding:70px 20px 20px;
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+}
+.name{
+    font-size:20px;
+    font-weight:700;
+    color:#0b4f6c;
+    text-align:center;
+}
+.designation{
+    font-size:14px;
+    color:#4b5563;
+    text-align:center;
+    margin-top:4px;
+}
+.save-btn{
+    margin:18px 0 10px;
+    background:#0b4f6c;
+    color:#fff;
+    padding:14px;
+    border-radius:10px;
+    text-align:center;
+    text-decoration:none;
+    font-weight:600;
+    display:block;
+}
+.actions{
+    display:flex;
+    justify-content:space-between;
+    margin:15px 0;
+}
+.action{
+    width:32%;
+    text-align:center;
+    font-size:13px;
+}
+.action a{
+    color:#0b4f6c;
+    text-decoration:none;
+}
+.section-title{
+    margin:18px 0 8px;
+    font-weight:700;
+    color:#0b4f6c;
+}
+.info{
+    background:#ffffff;
+    border-radius:12px;
+    padding:12px;
+    margin:10px 0;
+    box-shadow:0 3px 10px rgba(0,0,0,.05);
+    font-size:14px;
+}
+.footer{
+    margin-top:15px;
+    background:#0b4f6c;
+    color:#ffffff;
+    border-radius:14px;
+    padding:12px;
+    text-align:center;
+    font-weight:600;
+}
+</style>
 </head>
+
 <body>
-    <div class="container">
-        <div class="header">
-            <div class="name">Shanu N</div>
-            <div class="designation">B.Com, ACA</div>
-            <div class="company">Shanu & Associates</div>
-            <div class="company-type">CHARTERED ACCOUNTANTS</div>
-        </div>
 
-        <div class="profile-section">
-            <img src="photo.jpg" alt="Shanu N" class="profile-img">
-        </div>
+<div class="container">
 
-        <div class="about-section">
-            <h2 class="section-title">About Me</h2>
-            <p class="about-text">
-                CA. Shanu N is a B.Com Graduate and a qualified member of ICAI. Currently practicing as a Chartered Accountant in Shanu & Associates since 2023. Specialized in Income Tax, GST, Corporate Taxes, Internal Audits as well as financial advisory services
-            </p>
+    <div class="header">
+        <img src="photo.jpg" alt="Shanu N">
+    </div>
 
-            <a href="mailto:cashanun@gmail.com" class="contact-item">
-                <div class="contact-icon">
-                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
-                    </svg>
-                </div>
-                <span class="contact-text">cashanun@gmail.com</span>
-            </a>
+    <div class="card">
+        <div class="name">Shanu N, ACA</div>
+        <div class="designation">Chartered Accountant</div>
 
-            <a href="tel:+918590024466" class="contact-item">
-                <div class="contact-icon">
-                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
-                    </svg>
-                </div>
-                <span class="contact-text">+918590024466</span>
-            </a>
+        <!-- Save Contact -->
+        <a href="shanu.vcf" class="save-btn" download
+           onclick="gtag('event','save_contact');">
+           Save Contact
+        </a>
 
-            <a href="http://www.shanuca.com" target="_blank" class="contact-item">
-                <div class="contact-icon">
-                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
-                    </svg>
-                </div>
-                <span class="contact-text">www.shanuca.com</span>
-            </a>
-
-            <div class="contact-item">
-                <div class="contact-icon">
-                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
-                    </svg>
-                </div>
-                <span class="address-text">2nd Floor, SS Avenue, DC Road, Thondankulangara, Thathampally P.O, Alappuzha, Kerala – 688013</span>
+        <!-- Action Row -->
+        <div class="actions">
+            <div class="action">
+                <a href="tel:+918590024466">📞<br>Call</a>
+            </div>
+            <div class="action">
+                <a href="https://wa.me/918590024466">💬<br>WhatsApp</a>
+            </div>
+            <div class="action">
+                <a href="mailto:cashanun@gmail.com">✉️<br>Email</a>
             </div>
         </div>
 
-        <div class="button-group">
-            <button class="btn btn-save" onclick="saveContact()">Save Contact</button>
-            <button class="btn btn-share" onclick="shareContact()">Share Contact</button>
+        <!-- About -->
+        <div class="section-title">About CA. Shanu N</div>
+        <div class="info">
+            CA. Shanu N is a B.Com Graduate and a qualified member of ICAI.
+            Currently practicing as a Chartered Accountant since 2023.
+            Specialized in Income Tax, GST, Corporate Taxes, Internal Audits
+            and financial advisory services.
+        </div>
+
+        <!-- Contact Details -->
+        <div class="info">📞 +91 85900 24466</div>
+        <div class="info">✉️ cashanun@gmail.com</div>
+        <div class="info">
+            📍 2nd Floor, SS Avenue, DC Road,  
+            P.O Thondankulangara, Thathampally,  
+            Alappuzha, Kerala – 688013
+        </div>
+        <div class="info">
+            🌐 <a href="https://www.shanuca.com" target="_blank">www.shanuca.com</a>
+        </div>
+
+        <!-- Footer Branding -->
+        <div class="footer">
+            SHANU & ASSOCIATES<br>
+            Chartered Accountants
         </div>
     </div>
 
-    <script>
-        function saveContact() {
-            const vCard = `BEGIN:VCARD
-VERSION:3.0
-FN:Shanu N
-TITLE:ACA, Chartered Accountant
-ORG:Shanu & Associates
-TEL:+918590024466
-EMAIL:cashanun@gmail.com
-URL:www.shanuca.com
-ADR:;;2nd Floor, SS Avenue, DC Road, Thondankulangara;Alappuzha;Kerala;688013;India
-END:VCARD`;
+</div>
 
-            const blob = new Blob([vCard], { type: 'text/vcard' });
-            const url = window.URL.createObjectURL(blob);
-            const link = document.createElement('a');
-            link.href = url;
-            link.download = 'shanu.vcf';
-            document.body.appendChild(link);
-            link.click();
-            document.body.removeChild(link);
-            window.URL.revokeObjectURL(url);
-        }
-
-        function shareContact() {
-            if (navigator.share) {
-                navigator.share({
-                    title: 'Shanu N - Chartered Accountant',
-                    text: 'Contact details for CA. Shanu N',
-                    url: window.location.href
-                }).catch(err => console.log('Error sharing:', err));
-            } else {
-                alert('Sharing is not supported on this browser. You can copy the URL from the address bar.');
-            }
-        }
-    </script>
 </body>
 </html>
