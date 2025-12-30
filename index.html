@@ -18,7 +18,7 @@ gtag('config', 'G-HH319VT325');
 body{
     margin:0;
     background:#eef5f2;
-    font-family: "Segoe UI", Arial, sans-serif;
+    font-family:"Segoe UI",Arial,sans-serif;
     color:#1f2933;
 }
 .container{
@@ -26,28 +26,43 @@ body{
     margin:20px auto;
     padding:15px;
 }
+
+/* ICAI LOGO (outside header) */
+.icai-bar{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    margin-bottom:8px;
+}
+.icai-bar img{
+    height:42px;
+}
+
+/* HEADER */
 .header{
     background:linear-gradient(135deg,#0b4f6c,#08384e);
-    border-radius:16px 16px 0 0;
-    padding:25px 20px 60px;
-    text-align:center;
+    border-radius:18px;
+    padding:26px 20px 70px;
     position:relative;
 }
-.header img{
+.profile-img{
     width:96px;
     height:96px;
     border-radius:50%;
     object-fit:cover;
-    border:4px solid #ffffff;
+    border:4px solid #fff;
     position:absolute;
     left:50%;
     bottom:-48px;
     transform:translateX(-50%);
 }
+
+/* CARD */
 .card{
     background:#ffffff;
-    border-radius:0 0 16px 16px;
+    border-radius:18px;
     padding:70px 20px 20px;
+    margin-top:-10px;
     box-shadow:0 8px 20px rgba(0,0,0,.08);
 }
 .name{
@@ -62,6 +77,8 @@ body{
     text-align:center;
     margin-top:4px;
 }
+
+/* BUTTONS */
 .save-btn{
     margin:18px 0 10px;
     background:#0b4f6c;
@@ -87,19 +104,23 @@ body{
     color:#0b4f6c;
     text-decoration:none;
 }
+
+/* CONTENT */
 .section-title{
     margin:18px 0 8px;
     font-weight:700;
     color:#0b4f6c;
 }
 .info{
-    background:#ffffff;
+    background:#fff;
     border-radius:12px;
     padding:12px;
     margin:10px 0;
     box-shadow:0 3px 10px rgba(0,0,0,.05);
     font-size:14px;
 }
+
+/* FOOTER */
 .footer{
     margin-top:15px;
     background:#0b4f6c;
@@ -116,21 +137,28 @@ body{
 
 <div class="container">
 
-    <div class="header">
-        <img src="photo.jpg" alt="Shanu N">
+    <!-- ICAI LOGO (ETHICS SAFE) -->
+    <div class="icai-bar">
+        <img src="icai-logo.png" alt="CA India">
     </div>
 
+    <!-- HEADER -->
+    <div class="header">
+        <img src="photo.jpg" alt="Shanu N" class="profile-img">
+    </div>
+
+    <!-- CARD -->
     <div class="card">
         <div class="name">Shanu N, ACA</div>
         <div class="designation">Chartered Accountant</div>
 
-        <!-- Save Contact -->
+        <!-- SAVE CONTACT -->
         <a href="shanu.vcf" class="save-btn" download
            onclick="gtag('event','save_contact');">
            Save Contact
         </a>
 
-        <!-- Action Row -->
+        <!-- ACTIONS -->
         <div class="actions">
             <div class="action">
                 <a href="tel:+918590024466">📞<br>Call</a>
@@ -143,28 +171,28 @@ body{
             </div>
         </div>
 
-        <!-- About -->
+        <!-- ABOUT -->
         <div class="section-title">About CA. Shanu N</div>
         <div class="info">
             CA. Shanu N is a B.Com Graduate and a qualified member of ICAI.
-            Currently practicing as a Chartered Accountant since 2023.
-            Specialized in Income Tax, GST, Corporate Taxes, Internal Audits
-            and financial advisory services.
+            Practicing as a Chartered Accountant since 2023.
+            Specialized in Income Tax, GST, Corporate Taxes,
+            Internal Audits and financial advisory services.
         </div>
 
-        <!-- Contact Details -->
+        <!-- CONTACT DETAILS -->
         <div class="info">📞 +91 85900 24466</div>
         <div class="info">✉️ cashanun@gmail.com</div>
         <div class="info">
-            📍 2nd Floor, SS Avenue, DC Road,  
-            P.O Thondankulangara, Thathampally,  
+            📍 2nd Floor, SS Avenue, DC Road,<br>
+            P.O Thondankulangara, Thathampally,<br>
             Alappuzha, Kerala – 688013
         </div>
         <div class="info">
             🌐 <a href="https://www.shanuca.com" target="_blank">www.shanuca.com</a>
         </div>
 
-        <!-- Footer Branding -->
+        <!-- FIRM BRANDING -->
         <div class="footer">
             SHANU & ASSOCIATES<br>
             Chartered Accountants
