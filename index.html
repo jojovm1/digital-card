@@ -27,23 +27,25 @@ body{
     padding:15px;
 }
 
-/* ICAI LOGO (outside header) */
-.icai-bar{
-    display:flex;
-    align-items:center;
-    gap:8px;
-    margin-bottom:8px;
-}
-.icai-bar img{
-    height:42px;
-}
-
 /* HEADER */
 .header{
     background:linear-gradient(135deg,#0b4f6c,#08384e);
     border-radius:18px;
-    padding:26px 20px 70px;
+    padding:20px 20px 70px;
     position:relative;
+    text-align:center;
+    color:#fff;
+}
+.member{
+    font-size:13px;
+    letter-spacing:1px;
+    opacity:.85;
+}
+.member:before,
+.member:after{
+    content:"—";
+    margin:0 8px;
+    opacity:.6;
 }
 .profile-img{
     width:96px;
@@ -122,13 +124,23 @@ body{
 
 /* FOOTER */
 .footer{
-    margin-top:15px;
+    margin-top:18px;
     background:#0b4f6c;
     color:#ffffff;
     border-radius:14px;
-    padding:12px;
+    padding:14px 10px;
     text-align:center;
-    font-weight:600;
+}
+.footer .firm{
+    font-size:15px;
+    font-weight:700;
+    letter-spacing:.5px;
+}
+.footer .tag{
+    font-size:12px;
+    opacity:.85;
+    letter-spacing:1px;
+    margin-top:3px;
 }
 </style>
 </head>
@@ -137,13 +149,9 @@ body{
 
 <div class="container">
 
-    <!-- ICAI LOGO (ETHICS SAFE) -->
-    <div class="icai-bar">
-        <img src="icai-logo.png" alt="CA India">
-    </div>
-
     <!-- HEADER -->
     <div class="header">
+        <div class="member">Member of ICAI</div>
         <img src="photo.jpg" alt="Shanu N" class="profile-img">
     </div>
 
@@ -192,10 +200,10 @@ body{
             🌐 <a href="https://www.shanuca.com" target="_blank">www.shanuca.com</a>
         </div>
 
-        <!-- FIRM BRANDING -->
+        <!-- FOOTER -->
         <div class="footer">
-            SHANU & ASSOCIATES<br>
-            Chartered Accountants
+            <div class="firm">SHANU & ASSOCIATES</div>
+            <div class="tag">CHARTERED ACCOUNTANTS</div>
         </div>
     </div>
 
